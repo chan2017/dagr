@@ -1,5 +1,5 @@
 <h1>Listing categories</h1>
-<%= link_to 'New category', new_category_path %>
+<%= link_to 'New category', new_category_path%>
 <table>
   <tr>
     <th>Name</th>
@@ -9,7 +9,6 @@
   <% @categories.each do |category| %>
     <tr>
       <td><%= category.name %></td>
-      <td><%= check_box_tag(:include) %></td>
       <td><%= link_to 'Edit', edit_category_path(category) %></td>
       <td><%= link_to 'Destroy', category_path(category),
               method: :delete,

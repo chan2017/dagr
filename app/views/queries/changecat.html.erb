@@ -1,0 +1,17 @@
+<h1>changing categories for dagr</h1>
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+ 
+<%= form_tag queries_complete_path do %>
+  <% @cat.each do |category| %>
+    <tr>
+      <td><%= category.name %></td>
+      <td><%= check_box_tag "include[]", category.id, @arr.include?(category.name)%></td>
+    </tr>
+  <% end %>
+  <%= submit_tag "done"%>
+  <%end%>
+
+</table>

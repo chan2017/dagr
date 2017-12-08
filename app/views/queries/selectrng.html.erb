@@ -1,0 +1,22 @@
+
+<h1>time range DAGR report</h1>
+
+
+<%= form_tag("/queries/showrng", method: "get") do %>
+	<p><strong>start date:</strong>
+	<%= label_tag(:sYYYY, "YYYY:") %>
+	<%= text_field_tag(:sYYYY) %>
+	<%= label_tag(:sDD, "DD:") %>
+	<%= text_field_tag(:sDD) %>
+	<%= label_tag(:sMM, "MM:") %>
+	<%= text_field_tag(:sMM) %></p>
+	<p><strong>end date:</strong>
+	<%= label_tag(:eYYYY, "YYYY:") %>
+	<%= text_field_tag(:eYYYY) %>
+	<%= label_tag(:eDD, "DD:") %>
+	<%= text_field_tag(:eDD) %>
+	<%= label_tag(:eMM, "MM:") %>
+	<%= text_field_tag(:eMM) %></p>
+	<%= submit_tag("Search") %>
+<% end %>
+

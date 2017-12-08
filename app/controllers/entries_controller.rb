@@ -6,6 +6,7 @@ class EntriesController < ApplicationController
     @entry = Entry.find(params[:id])
   end
 
+  
 
   def destroy
   	@entry = Entry.find(params[:id])
@@ -27,7 +28,6 @@ class EntriesController < ApplicationController
   		render 'edit'
   	end
   end
-
 
 	def new
 		@entry = Entry.new
