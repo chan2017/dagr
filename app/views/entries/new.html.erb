@@ -1,6 +1,7 @@
   
-<%= form_with scope: :entry, url: entries_path, local: true do |form| %>
-  
+
+<%= form_for @entry, url: {action: "create"}, html: {class: "nifty_form"} do |form| %>
+
 
 
   <p>
@@ -15,7 +16,7 @@
 
   <p>
     <%= form.label :year %><br>
-    <%= form.number_field :integer %>
+    <%= form.number_field :year %>
   </p>
  
   <p>
